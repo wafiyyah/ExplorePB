@@ -1,0 +1,1 @@
+<script src="{{ url('frontend/scripts/script.js') }}"></script>

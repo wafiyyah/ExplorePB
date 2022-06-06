@@ -1,0 +1,182 @@
+* {
+    box-sizing:border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #ECEDF1;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+ 
+/* jumbotron */
+.header{
+    margin-top: -60px;
+    display: grid;
+    grid-template-areas: "jumbotron";
+}
+.jumbotron{
+    grid-area: jumbotron;
+    display: grid;
+    text-align: center;
+    place-content: center;
+    height: 400px;
+    background-image: url(img/mercu\ pb\ 1-2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+}
+.jumbotron:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+}
+.display{
+    z-index: 1;
+    position: relative;
+}
+.jumbotron h3{
+    font-size: 40px;
+    font-family: Viga;
+    margin-top: 36px;
+    margin-bottom: 32px;
+    letter-spacing: 4px;
+    
+}
+/* Isi */
+.container-produk{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 36px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.cards-produk{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 48px;
+}
+.card-produk{
+    display: flex;
+    flex-direction: column;
+    background-color: #ECEDF1;
+    max-width: 350px;
+    flex: 1 0 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: -10px -10px 20px rgba(255,255,255, 1), 10px 10px 20px rgba(45, 62, 80,0.2);
+    text-decoration: none;
+    text-align: center;
+}
+.gmb-produk{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.gmb-produk img{
+    max-width: 350px;
+    max-height: 250px;
+    border-radius: 30px;
+    padding: 20px;
+    flex: 0 0 120px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.konten{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px 32px;
+    padding-top: 4px;
+    text-align: left;
+}
+.judul-produk{
+    color: #3F6370;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 4px;
+}
+.desk-produk{
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: black;
+    opacity: 70%;
+    margin-bottom: 12px;
+}
+.harga{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #6dbedc;
+}
+.nama-penjual{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    opacity: 70%;
+}
+.kontak-penjual{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin-bottom: 6px;
+    color: #6dbedc;
+}
+.alamat-penjual{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    opacity: 35%;
+}
+
+@media (max-width: 1024px){
+
+/*  */
+} 
+
+/* @media (max-width: 768px){
+    
+} */
+@media (max-width: 450px){
+
+    .header h3{
+        font-size: 28px;
+    }
+    .card-produk{
+        gap: 5px;
+        max-width: 250px;
+    }
+    .card-produk img{
+        max-width: 250px;
+        max-height: 250px;
+    }
+    .judul-produk{
+        font-size: 18px;
+    }
+    .desk-produk{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn{
+        text-align: right;
+    }
+    .container-footer{
+        padding: 0 6px;
+    }
+}

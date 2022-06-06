@@ -1,0 +1,223 @@
+body {
+    background-color: #E4EEF2;
+}
+/* slide show */
+.slideshow-container {
+  display: none;
+  width: 90% !important;
+  position: relative;
+  margin: auto;
+  margin-top: -20px !important;
+  background-position: center;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  .mySlides img{
+    height: 350px !important;
+    border-radius: 12px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    font-weight: 200px;
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+/* Isi */
+.container-artikel{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 36px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.header{
+    color: #3F6370;
+    margin-bottom: 36px;
+    margin-top: -10px;
+    font-family: Viga;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.cards-artikel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+}
+.card-artikel{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-width: 350px;
+    min-height: 440px;
+    flex: 1 0 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 3px 2px 14px rgba(0,0,0,0.5);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+}
+.card-artikel img{
+    max-width: 350px;
+    max-height: 250px;
+    border-radius: 12px 12px 0px 0px;
+    flex: 0 0 120px;
+    padding: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.konten{
+     display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    text-align: left;
+}
+.judul-artikel{
+    color: #3F6370;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.nama-penulis{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    color: black;
+    opacity: 80%;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.waktu-publish{
+    font-family: 'Poppins', sans-serif;
+    font-size: 8px;
+    color: black;
+    opacity: 70%;
+}
+.btn{
+    text-align: right;
+    margin-top: auto;  
+}
+.desk-singkat{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: black;
+    opacity: 80%;
+    margin-bottom: 12px;
+}
+.btn-detail{
+    background-color: #0EB9F8;
+    padding: 8px 32px;
+    border-radius:4px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+.btn-detail:hover{
+    background-color: #3ccbff;
+}
+.pegi{
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+  background-color: none !important;
+  margin: 16px;
+} 
+.pegi span {
+  color: #3F6370 !important;
+  opacity: 70%;
+}
+.pegi a {
+  color: #3F6370 !important;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 20px;
+}
+.pegi a:hover{
+  color: #0EB9F8 !important;
+}
+.pegi svg{
+  max-width: 24px;
+}
+.pegi nav{
+  background-color: #E4EEF2;
+}
+@media (max-width: 450px){
+
+ .slideshow-container{
+    display: none;
+  }
+ .header{
+    font-size: 16px;
+  }
+ .card-artikel{
+        max-width: 300px;
+    }
+ .card-artikel img{
+        max-width: 300px;
+        padding:0;
+    }
+    
+
+}
+

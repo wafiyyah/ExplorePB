@@ -1,0 +1,666 @@
+* {
+  box-sizing:border-box;
+  margin: 0; 
+  padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* menubar */
+header{
+  display: inline;
+}
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(1, 48, 95, 0.5);
+  color:white;
+  padding: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.nav-brand {
+  text-decoration: none;
+  font-size: 28px;
+  font-family: Viga;
+  margin-left: -100px;
+}
+
+.menu ul{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  justify-self: end;
+}
+.menu a{
+  color: white !important;
+  font-family: Montserrat;
+  font-size: 14px;
+
+}
+
+.hyper:hover::after{
+  content: '';
+  display: block;
+  border-bottom: 3px solid #87CBE3;
+  width: 50%;
+  margin:auto;
+  padding-bottom: 5px;
+  margin-bottom: -8px;
+}
+.login{
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.logout {
+  align-items: center;
+  cursor: pointer;
+}
+
+.button {
+  background-color: #82B9CD;
+  transition: all 0.5s;
+  padding: 8px 12px;
+  border-radius: 40px; 
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.button:hover{
+  background-color: #87CBE3;
+}
+/* HALAMAN lANDING PAGE */
+/* Slideshow container */
+.slideshow-container {
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  margin-top: -100px;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.draker::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+  position: absolute;
+  bottom: 0;
+}
+.mySlides img{
+  width: 100%;
+  height: 500px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+.display{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 40%;
+  color: white;
+  padding:0 12px;
+  position: absolute;
+  bottom: 32px;
+  width: 100%;
+  text-align: center;
+}
+.display h3{
+  text-align: center;
+  font-size: 28px;
+  font-family: Viga;
+  margin-bottom: 40px;
+}
+.display a{
+  color: white !important;
+  font-family: Montserrat;
+  font-size: 14px;
+}
+.button-potensi {
+  background-color: #0EB9F8;
+  padding: 8px 15px;
+  border-radius: 40px; 
+}
+.button-potensi:hover {
+  background-color: #50c6f1; 
+}
+
+
+
+
+/* Desa Panel */
+.container-panel {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
+  }
+  .desa-panel {
+    text-align: center;
+    position: absolute;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -110px;
+    background-color: white;
+    padding: 5px;
+    padding-bottom: 16px;
+    padding-left: 30px;
+  }
+  
+  .desa-panel h3{
+    font-size: 24px;
+    padding: -10px 10px;
+    color: #3F6370;
+    font-family: Viga;
+    font-weight: 300;
+    padding-bottom: 16px;
+    padding-top: 12px;
+  }
+  
+  .desa-panel img {
+    width: 200px;
+    height:140px;
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: 20px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    opacity: 1;
+  } 
+  
+  .gambar-desa:hover{
+  opacity: 0.6;
+  }
+  .desa {
+    display: flex;
+    gap: 12px !important;
+  }
+  .thumb{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .gambar-desa{
+    align-items: center;
+  }
+  .nama-desa{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80%;
+    margin-left: 4px;
+    color: white;
+    font-weight: 200px !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+  }
+  .nama-desa p{
+    background-color: rgba(16, 58, 84, 0.5);
+    padding:0 10px;
+    border-radius: 4px;
+  }
+  .thumb img{
+    position: relative;
+  }
+
+
+
+
+/* Poitensi */
+.potensi{
+  background-color: #E4EEF2;
+  justify-content: center;
+  align-items: center;
+  margin: -100px 0;
+  height: 820px;
+  text-align: center;
+}
+
+.konten-potensi{
+  justify-content: center;
+  background-color: #E4EEF2;
+  padding-top: 220px;
+  margin: 64px;
+  
+}
+.potensi h3{
+  text-align: left;
+  font-size: 48px;
+  padding: -10px 10px;
+  color: #3F6370;
+  font-family: Viga;
+  font-weight: 300;
+  padding-bottom: 24px;
+  padding-top: 64px;
+}
+.cards{
+  background-color: #E4EEF2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+}
+.card {
+  background-color: #3F6370;
+  box-shadow: 0 4px 8px 0 rgba(27, 52, 64, 0.5);
+  transition: 0.3s;
+  border-radius: 16px;
+  max-width: 200px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px 0 rgba(27, 52, 64, 0.7);
+}
+
+.jenis-potensi{
+  padding-bottom: 8px;
+  padding-top: 4px;
+  color: white;
+}
+.jenis-potensi h4{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+.card img{
+  border-radius: 16px 16px 0 0;
+}
+
+
+
+/* ptofil desa landing page */
+.Pengenalan-Desa{
+  padding-top: 80px;
+  background-color: white;
+}
+
+.biru{
+  background-color: #FFFF;
+  display: grid;
+  grid-template-areas: 'foto desk';
+  gap: 32px;
+  max-width: 1170px;
+  padding: 84px 8px;
+  margin: 0 auto;
+}
+
+.Pengenalan-Desa h5{
+  color: black;
+  opacity: 70%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  margin-top: 32px;
+}
+.gmb-desa{
+  border-radius: 12px;
+  width: 550px;
+  height: 300px;
+}
+.button-detail{
+  margin-top: 20px;
+  }  
+.desk{
+  grid-area: desk;
+}
+.button-detail a{
+  color: white !important;
+  font-family: Montserrat;
+}
+.desk h3{
+  color: #3F6370;
+  font-family: Montserrat;
+  font-size: 32px;
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
+.desk p{
+  color: black;
+  opacity: 70%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px !important;
+}
+
+/* Footer */
+footer{
+  background-color:#3F6370;
+  padding: 12px 0;
+}
+.container-footer{
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 12px;
+  margin-bottom: 10px;
+  color: white;
+}
+.main-footer{
+  display: flex;
+  gap: 185px;
+}
+.gmaps{
+  border-radius: 12px;
+}
+.cpr{
+  text-align: center;
+  padding-top: 24px;
+
+}
+.cpr p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  }
+.judul-footer{
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.social{
+padding-bottom: 16px;
+}
+
+.title-social{
+  padding-left: 16px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color: #3F6370 !important;
+}
+.social i {
+  font-size: 16px;
+  color: white;
+}
+.logo-kkn{
+  text-align: center;
+}
+.kkn{
+  text-align: left;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+
+}
+.logo-kkn img{
+  padding-top: 20px;
+  max-width:90px;
+}
+.pegi{
+  font-family: 'Poppins', sans-serif;
+  text-align: right;
+  background-color: none !important;
+  margin: 16px;
+} 
+.pegi span {
+  color: #3F6370 !important;
+  opacity: 70%;
+}
+.pegi a {
+  color: #3F6370 !important;
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 20px;
+}
+.pegi a:hover{
+  color: #0EB9F8 !important;
+}
+.pegi svg{
+  max-width: 24px;
+}
+.pegi nav{
+  background-color: transparent;
+}
+
+@media (max-width: 1024px){
+  .nav-brand{
+      display: none;
+  }
+  .menu{
+      grid-template-columns: 1fr;
+      padding: 12px;
+  }
+  .button {
+      padding: 4px 8px;
+  }
+  .menu ul{
+      justify-self: normal;
+  }
+
+  .desk h3{
+      font-size: 24px;
+      margin-bottom: 18px;
+  }
+  .desk p{
+      font-size: 10px;
+  }
+
+  .main-footer{
+    text-align: center;
+    flex-direction: column;
+    gap:12px;
+  }
+  .judul-footer{
+    text-align: center;
+  }
+  .contact{
+    padding-top: 5px;
+    padding-bottom: 16px;
+  }
+  .kkn {
+    text-align: center !important;
+}
+  .potensi{
+    height: 600px;
+    margin-top: -150px;
+  }
+  .konten-potensi{
+    padding-top: 24px;
+  }
+  .potensi h3{
+    text-align: center;
+    padding-top: 140px;
+  }
+  .cards{
+      margin: auto;
+      gap: 24px;
+  }
+  .card{
+    max-width: 150px;
+  }
+  .desa-panel {
+    width: 95%;
+    position: relative;
+  }
+  .desa {
+    justify-content: center;
+    margin-left: -12px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .thumb{
+    justify-content: center;
+  }
+  .desa-panel img {
+    max-width: 120px;
+    height: 80px;
+  } 
+  .nama-desa{
+    font-size: 8px;
+    margin-left:1px;
+  }
+  .nama-desa p{
+    padding: 0 4px;
+  }
+  /* LANDING PAGE */
+  .Pengenalan-Desa{
+      background-color: #FFFF;
+      padding-top: 80px;
+      text-align: center;
+  }
+  .biru{
+      grid-template-areas: 'foto' 'desk';
+  }
+  .desk{
+    font-size: 16px;
+    padding: auto 12px;
+  }
+}
+
+/* @media (max-width: 768px){
+  
+} */
+@media (max-width: 450px){
+  .menu{
+      grid-template-columns: 1fr;
+  }
+  .button {
+      padding: 4px 8px;
+  }
+  .menu ul{
+      padding-left: -100px;
+  }
+  .menu a{
+      font-size: 12px;
+    }
+  .display{
+    top: 45%;
+  }
+    .display h3{
+      text-align: center;
+      font-size: 24px;
+      font-family: Viga;
+      margin-bottom: 16px;
+    }
+    .display a{
+      color: white !important;
+      font-family: Montserrat;
+      font-size: 14px;
+    }
+    .button-potensi {
+     display: none;
+    }
+  .desa-panel{
+    display: none;
+  }
+  .foto-desa img{
+      max-width: 300px;
+  }
+  .Pengenalan-Desa img{
+      max-width: 300px;
+  }
+  .biru{
+    padding: 0;
+  }
+  .desk{
+    padding: 0 10px;
+  }
+  .potensi{
+    max-height: 800px;
+    margin-bottom: 32px;
+  }
+  .potensi h3{
+      font-size: 32px;
+      padding-bottom: 20px;
+      text-align: center;
+      margin-top: 4px;
+  }
+  .konten-potensi{
+    padding-top: 16px;
+    margin: 0px;
+    max-width: none;
+   }
+  .cards{
+    max-width: none;
+  }
+  .card{
+    max-width: 120px;
+  }
+  .gmb-desa{
+    max-width: 350px;
+    max-height: 200px;
+  }
+  .Pengenalan-Desa{
+    padding:12px 0;
+  }
+  .button-detail a{
+    color: white !important;
+    font-family: Montserrat;
+    font-size: 12px;
+  }
+  .biru{
+    margin-top: 32px;
+    gap: 4px;
+  }
+  .desk h3{
+    margin-bottom: 12px;
+  }
+  .desk p{
+    text-align: justify;
+    color: black;
+    opacity: 70%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    margin-bottom: 4px;
+
+  }
+  .prev, .next{
+      display: none;
+  }
+  }
+}
